@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\src\EasyExchange.Sdk.csproj" />
+    <PackageReference Include="EasyExchange.Sdk" Version="1.0.0.155-alpha" />
   </ItemGroup>
 
 </Project>
