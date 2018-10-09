@@ -6,8 +6,7 @@ namespace EasyExchange.Sdk.Sample.SalesInvoices
 {
     internal class GetInvoices
     {
-
-        internal static void Execute( Client client )
+        internal static void Execute(Client client)
         {
             string emailAddress = "name@example.com";
             DateTime startDate = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
