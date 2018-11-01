@@ -11,6 +11,8 @@ namespace EasyExchange.Sdk.Sample.SalesInvoices {
             invoiceToPost.Receiver.Name = "Company BV";
             invoiceToPost.Receiver.EmailAddress.Name= "John Doe";
             invoiceToPost.Receiver.EmailAddress.Address = "info@example.com";
+            invoiceToPost.Receiver.PeppolAddress.Iso6523Code = "0106";
+            invoiceToPost.Receiver.PeppolAddress.Iso6523Code = "KVKNUMBER";
             invoiceToPost.Xml = "<YOUR_INVOICE_XML_GOES_HERE/>";
             invoiceToPost.Image.FileName = "invoice.pdf";
             invoiceToPost.Image.ContentType = "application/pdf";
