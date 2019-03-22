@@ -12,7 +12,7 @@ namespace EasyExchange.Sdk.Sample
 
         static void Main(string[] args)
         {
-            Client client = new Client(ENDPOINT_URL, CLIENT_ID, CLIENT_SECRET, EasyExchangeScope.SalesInvoiceServer);
+            Client client = new Client(ENDPOINT_URL, CLIENT_ID, CLIENT_SECRET, EasyExchangeScope.SalesInvoices);
             client.Authenticate( USERNAME, PASSWORD ).Wait();
 
             GetInvoices.Execute( client );
