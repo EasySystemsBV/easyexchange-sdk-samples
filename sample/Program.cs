@@ -4,7 +4,7 @@ namespace EasyExchange.Sdk.Sample
 {
     class Program
     {
-        private const string ENDPOINT_URL = "https://easyexchange.es-dev.net";
+        private const string ENDPOINT_URL = "https://easyexchange-partners.es-prd.net";
         private const string CLIENT_ID = "CLIENT_ID";
         private const string CLIENT_SECRET = "CLIENT_SECRET";
         private const string USERNAME = "username";
