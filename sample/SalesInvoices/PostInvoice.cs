@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
-using EasyExchange.SalesInvoiceServer.Sdk.Models.PostInvoice;
+using EasyExchange.Sdk.SalesInvoices.Models.PostInvoice;
 
 namespace EasyExchange.Sdk.Sample.SalesInvoices {
     internal class PostInvoice

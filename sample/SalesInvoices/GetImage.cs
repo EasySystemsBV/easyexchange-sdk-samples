@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
-using EasyExchange.SalesInvoiceServer.Sdk.Models.GetImage;
+using EasyExchange.Sdk.SalesInvoices.Models.GetImage;
 
 namespace EasyExchange.Sdk.Sample.SalesInvoices {
     internal class GetImage

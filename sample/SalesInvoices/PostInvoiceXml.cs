@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
-using EasyExchange.SalesInvoiceServer.Sdk.Models.PostInvoiceXml;
+using EasyExchange.Sdk.SalesInvoices.Models.PostInvoiceXml;
 
 namespace EasyExchange.Sdk.Sample.SalesInvoices {
     internal class PostInvoiceXml
@@ -13,6 +13,7 @@ namespace EasyExchange.Sdk.Sample.SalesInvoices {
             invoiceToPost.Receiver.EmailAddress.Address = "info@example.com";
             invoiceToPost.Receiver.PeppolAddress.Iso6523Code = "0106";
             invoiceToPost.Receiver.PeppolAddress.Iso6523Code = "KVKNUMBER";
+            invoiceToPost.Receiver.PostalAddress.StreetName = "street"; // provide more information about postaladdress
             invoiceToPost.Xml = "<YOUR_INVOICE_XML_GOES_HERE/>";
             invoiceToPost.Image.FileName = "invoice.pdf";
             invoiceToPost.Image.ContentType = "application/pdf";
