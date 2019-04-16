@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Threading.Tasks;
-using EasyExchange.Sdk.SalesInvoices.Models.GetImage;
+using EasyExchange.Sdk.Core.SalesInvoices.Models.GetImage;
 
-namespace EasyExchange.Sdk.Sample.SalesInvoices {
+namespace EasyExchange.Sdk.Core.Sample.SalesInvoices {
     internal class GetImage
     {
         internal static void Execute(Client client)

@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Threading.Tasks;
-using EasyExchange.Sdk.SalesInvoices.Models.PostInvoice;
+using EasyExchange.Sdk.Core.SalesInvoices.Models.PostInvoice;
 
-namespace EasyExchange.Sdk.Sample.SalesInvoices {
+namespace EasyExchange.Sdk.Core.ample.SalesInvoices {
     internal class PostInvoice
     {
         internal static void Execute(Client client)

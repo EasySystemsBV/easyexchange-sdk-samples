@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Threading.Tasks;
-using EasyExchange.Sdk.PurchaseInvoices.Models.Confirm;
+using EasyExchange.Sdk.Core.PurchaseInvoices.Models.Confirm;
 
-namespace EasyExchange.Sdk.Sample.PurchaseInvoices
+namespace EasyExchange.Sdk.Core.Sample.PurchaseInvoices
 {
     internal class Confirm
     {

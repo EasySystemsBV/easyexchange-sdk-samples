@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Threading.Tasks;
-using EasyExchange.Sdk.PurchaseInvoices.Models.GetDocumentDetails;
+using EasyExchange.Sdk.Core.PurchaseInvoices.Models.GetDocumentDetails;
 
-namespace EasyExchange.Sdk.Sample.PurchaseInvoices {
+namespace EasyExchange.Sdk.Core.Sample.PurchaseInvoices {
     internal class GetDocumentDetails
     {
         internal static void Execute(Client client)

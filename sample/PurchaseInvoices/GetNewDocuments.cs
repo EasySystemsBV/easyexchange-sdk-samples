@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace EasyExchange.Sdk.Sample.PurchaseInvoices {
+namespace EasyExchange.Sdk.Core.Sample.PurchaseInvoices {
     internal class GetNewDocuments
     {
         internal static void Execute(Client client)

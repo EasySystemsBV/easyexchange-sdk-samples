@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Threading.Tasks;
-using EasyExchange.Sdk.SalesInvoices.Models.GetInvoices;
+using EasyExchange.Sdk.Core.SalesInvoices.Models.GetInvoices;
 
-namespace EasyExchange.Sdk.Sample.SalesInvoices
+namespace EasyExchange.Sdk.Core.Sample.SalesInvoices
 {
     internal class GetInvoices
     {
