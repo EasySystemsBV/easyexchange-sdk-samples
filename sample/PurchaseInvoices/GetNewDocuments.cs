@@ -7,8 +7,6 @@ namespace EasyExchange.Sdk.Core.Sample.PurchaseInvoices {
     {
         internal static void Execute(Client client)
         {
-            Guid id = Guid.NewGuid();
-
             Task<List<string>> task = Task.Run(
                 async () => await client.PurchaseInvoices.GetNewDocumentsAsync());
             Console.WriteLine($"Items: ", task.Result.Count);

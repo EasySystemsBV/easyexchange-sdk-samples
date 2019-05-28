@@ -7,10 +7,10 @@ namespace EasyExchange.Sdk.Core.Sample.PurchaseInvoices {
     {
         internal static void Execute(Client client)
         {
-            Guid id = Guid.NewGuid();
+            string documentReference = Guid.NewGuid().ToString();
 
             Task<GetDocumentResponse> task = Task.Run(
-                async () => await client.PurchaseInvoices.GetDocumentDetailsAsync(id));
+                async () => await client.PurchaseInvoices.GetDocumentDetailsAsync(documentReference));
             Console.WriteLine($"PayloadXml: ", task.Result.PayloadXml);
         }
     }
