@@ -4,15 +4,14 @@ using EasyExchange.Sdk.Core.SalesInvoices.Models.GetInvoices;
 
 namespace EasyExchange.Sdk.Core.Sample.SalesInvoices
 {
-    internal class GetInvoices
+    internal static class GetInvoices
     {
-        internal static void Execute(Client client)
+        internal static async Task Execute(Client client)
         {
             DateTime startDate = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
 
-            Task<GetInvoicesResponse> task = Task.Run(
-                async () => await client.SalesInvoices.GetInvoicesAsync(startDate, null));
-            foreach (GetInvoice invoice in task.Result.Data)
+            GetInvoicesResponse result = await client.SalesInvoices.GetInvoicesAsync(startDate, null);
+            foreach (GetInvoice invoice in result.Data)
             {
                 Console.WriteLine($"Invoice ID: ", invoice.Identifier);
             }

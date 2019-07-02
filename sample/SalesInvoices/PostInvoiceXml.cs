@@ -4,13 +4,13 @@ using System.Threading.Tasks;
 using EasyExchange.Sdk.Core.SalesInvoices.Models.PostInvoiceXml;
 
 namespace EasyExchange.Sdk.Core.Sample.SalesInvoices {
-    internal class PostInvoiceXml
+    internal static class PostInvoiceXml
     {
-        internal static void Execute(Client client)
+        internal static async Task Execute(Client client)
         {
-            byte[] AsBytes = File.ReadAllBytes(@"C:\Temp\SetupFeeInvoice.pdf");
+            byte[] AsBytes = File.ReadAllBytes(@"C:\Invoice.pdf");
             String AsBase64String = Convert.ToBase64String(AsBytes);
-            String AsXml = File.ReadAllText(@"C:\Users\amaters\OneDrive - Innovestit Group bv\Development\Exchange Connector\deisis2easy_ubl-2.xml");
+            String AsXml = File.ReadAllText(@"C:\xmlfile.xml");
 
             PostSalesInvoiceXml invoiceToPost = new PostSalesInvoiceXml();
             invoiceToPost.Receiver.Name = "Company BV";
@@ -25,9 +25,8 @@ namespace EasyExchange.Sdk.Core.Sample.SalesInvoices {
             invoiceToPost.Image.ContentType = "application/pdf";
             invoiceToPost.Image.Base64Content = AsBase64String;
 
-            Task<PostSalesInvoiceXmlResponse> task = Task.Run(
-                async () => await client.SalesInvoices.PostXmlAsync(invoiceToPost));
-            Console.WriteLine($"Invoice ID: ", task.Result.Id);
+            PostSalesInvoiceXmlResponse result = await client.SalesInvoices.PostXmlAsync(invoiceToPost);
+            Console.WriteLine($"Invoice ID: ", result);
         }
     }
 }

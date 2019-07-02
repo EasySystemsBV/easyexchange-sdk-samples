@@ -1,4 +1,6 @@
 ﻿using EasyExchange.Sdk.Core.Sample.SalesInvoices;
+using System.Threading.Tasks;
+using EasyExchange.Sdk.Core.Sample.PeppolDocuments;
 
 namespace EasyExchange.Sdk.Core.Sample
 {
@@ -12,10 +14,15 @@ namespace EasyExchange.Sdk.Core.Sample
 
         static void Main(string[] args)
         {
-            Client client = new Client(ENDPOINT_URL, CLIENT_ID, CLIENT_SECRET);
-            client.Authenticate( USERNAME, PASSWORD ).Wait();
+            MainAsync().Wait();
 
-            GetInvoices.Execute( client );
+        }
+
+        static async Task MainAsync()
+        {
+            Client client = new Client(ENDPOINT_URL, CLIENT_ID, CLIENT_SECRET);
+            await client.Authenticate(USERNAME, PASSWORD);
+            Classify.Execute(client);
         }
     }
 }

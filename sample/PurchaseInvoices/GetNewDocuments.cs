@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace EasyExchange.Sdk.Core.Sample.PurchaseInvoices {
-    internal class GetNewDocuments
+    internal static class GetNewDocuments
     {
-        internal static void Execute(Client client)
+        internal static async Task Execute(Client client)
         {
-            Task<List<string>> task = Task.Run(
-                async () => await client.PurchaseInvoices.GetNewDocumentsAsync());
-            Console.WriteLine($"Items: ", task.Result.Count);
+            List<string> result = await client.PurchaseInvoices.GetNewDocumentsAsync();
+            Console.WriteLine($"Items: ", result.Count);
         }
     }
 }

@@ -2,10 +2,10 @@
 using System.Threading.Tasks;
 using EasyExchange.Sdk.Core.SalesInvoices.Models.PostInvoice;
 
-namespace EasyExchange.Sdk.Core.ample.SalesInvoices {
-    internal class PostInvoice
+namespace EasyExchange.Sdk.Core.Sample.SalesInvoices {
+    internal static class PostInvoice
     {
-        internal static void Execute(Client client)
+        internal static async Task Execute(Client client)
         {
             PostSalesInvoice invoiceToPost = new PostSalesInvoice();
             invoiceToPost.Receiver.Name = "Company BV";
@@ -13,9 +13,8 @@ namespace EasyExchange.Sdk.Core.ample.SalesInvoices {
             invoiceToPost.Image.FileName = "invoice.pdf";
             invoiceToPost.Image.ContentType = "application/pdf";
             invoiceToPost.Image.Base64Content = "<BASE64GOESHERE>";
-            Task<PostSalesInvoiceResponse> task = Task.Run(
-                async () => await client.SalesInvoices.PostAsync(invoiceToPost));
-            Console.WriteLine($"Invoice ID: ", task.Result.Id);
+            PostSalesInvoiceResponse result = await client.SalesInvoices.PostAsync(invoiceToPost);
+            Console.WriteLine($"Invoice ID: ", result.Id);
         }
     }
 }
