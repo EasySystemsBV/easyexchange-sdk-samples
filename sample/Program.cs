@@ -22,7 +22,7 @@ namespace EasyExchange.Sdk.Core.Sample
         {
             Client client = new Client(ENDPOINT_URL, CLIENT_ID, CLIENT_SECRET);
             await client.Authenticate(USERNAME, PASSWORD);
-            Classify.Execute(client);
+            await Classify.Execute(client);
         }
     }
 }
