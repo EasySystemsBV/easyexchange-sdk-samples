@@ -1,5 +1,4 @@
-﻿using EasyExchange.Sdk.Core.Sample.SalesInvoices;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using EasyExchange.Sdk.Core.Sample.PeppolDocuments;
 
 namespace EasyExchange.Sdk.Core.Sample

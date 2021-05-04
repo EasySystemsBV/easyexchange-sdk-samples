@@ -10,7 +10,11 @@ namespace EasyExchange.Sdk.Core.Sample.PurchaseInvoices {
             string documentReference = Guid.NewGuid().ToString();
 
             GetDocumentResponse result = await client.PurchaseInvoices.GetDocumentDetailsAsync(documentReference);
-            Console.WriteLine($"PayloadXml: ", result.PayloadXml);
+            Console.WriteLine($"Reference: ", result.Reference);
+
+            var xmlResult = await client.PurchaseInvoices.Xml(documentReference);
+            string xml = xmlResult.Content.ToString();
+            Console.WriteLine($"Xml: ", xml);
         }
     }
 }
